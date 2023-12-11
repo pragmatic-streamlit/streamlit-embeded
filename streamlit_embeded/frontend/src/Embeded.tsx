@@ -61,13 +61,20 @@ const Embeded = ({ args }: EmbededProps) => {
     setHtml(container.innerHTML)
     container.remove()
   }, [args.html])
-
+  var blob = new Blob(
+    [html],
+    {
+      type: 'text/html',
+    },
+  );
+  const url = URL.createObjectURL(blob);
   return (
     <iframe
       id={id}
       width="100%"
       frameBorder={0}
-      srcDoc={html}
+      src={url}
+      //srcDoc={html}
     />
   )
 }
