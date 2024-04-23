@@ -1,6 +1,6 @@
 # 📈 Streamlit Embeded
 
-[![GitHub][github_badge]][github_link] [![PyPI][pypi_badge]][pypi_link] 
+Embed content as iframe with automatically resize to fit its content.
 
 ## Installation
 
@@ -20,5 +20,4 @@ source = """
 """
 
 st_embeded(source)
-
 ```
